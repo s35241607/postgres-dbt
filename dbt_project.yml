@@ -1,12 +1,12 @@
-name: 'jaffle_shop'
-version: '1.0.0'
+name: "postgres_dbt"
+version: "1.0.0"
 config-version: 2
 
 # This is a dbt property that allows you to refer to this project in other projects
 # For more information on this property, consult the dbt documentation:
 # https://docs.getdbt.com/docs/build/projects#name
 
-profile: 'default'
+profile: "postgres_dbt"
 # This is the name of the profile that dbt will use to connect to your database
 # For more information on profiles, consult the dbt documentation:
 # https://docs.getdbt.com/docs/core/connect-data-platform/profiles.yml
