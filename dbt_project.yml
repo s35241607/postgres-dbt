@@ -1,0 +1,26 @@
+name: 'jaffle_shop'
+version: '1.0.0'
+config-version: 2
+
+# This is a dbt property that allows you to refer to this project in other projects
+# For more information on this property, consult the dbt documentation:
+# https://docs.getdbt.com/docs/build/projects#name
+
+profile: 'default'
+# This is the name of the profile that dbt will use to connect to your database
+# For more information on profiles, consult the dbt documentation:
+# https://docs.getdbt.com/docs/core/connect-data-platform/profiles.yml
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# These are the directories that dbt will clean up when you run `dbt clean`
+# For more information on this property, consult the dbt documentation:
+# https://docs.getdbt.com/reference/project-configs/clean-targets
+clean-targets:
+  - "target"
+  - "dbt_packages"
