@@ -19,12 +19,14 @@ customers as (
 order_details as (
     select
         o.id as order_id,
+        c.id as customer_id,
         c.first_name || ' ' || c.last_name as customer_name,
         p.name as product_name,
         o.quantity,
         p.price,
         (o.quantity * p.price) as total_price,
-        o.order_date
+        o.order_date,
+        current_timestamp as last_updated
     from orders o
     join customers c on o.customer_id = c.id
     join products p on o.product_id = p.id

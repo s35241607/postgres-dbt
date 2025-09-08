@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: public
+    tables:
+      - name: po_line
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_products
+      - name: rt
+      - name: sod
+      - name: v_high_value_orders
