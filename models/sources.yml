@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "原始 seed 資料來源（由 dbt seed 匯入）"
+    schema: public
+    tables:
+      - name: suppliers
+        description: "供應商資料"
+      - name: materials
+        description: "物料資料"
+      - name: purchase_orders
+        description: "採購訂單資料"
+      - name: deliveries
+        description: "到貨記錄資料"

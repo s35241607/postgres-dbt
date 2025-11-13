@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_suppliers
+    description: "供應商原始資料清理表"
+    columns:
+      - name: supplier_id
+        description: "供應商唯一識別碼"
+        tests:
+          - not_null
+          - unique
+      - name: supplier_name
+        description: "供應商名稱"
+      - name: region
+        description: "供應商地區"
+
+  - name: stg_materials
+    description: "物料原始資料清理表"
+    columns:
+      - name: material_id
+        description: "物料唯一識別碼"
+        tests:
+          - not_null
+          - unique
+      - name: material_name
+        description: "物料名稱"
+      - name: category
+        description: "物料分類"
+
+  - name: stg_purchase_orders
+    description: "採購訂單原始資料清理表"
+    columns:
+      - name: order_id
+        description: "訂單編號"
+        tests:
+          - not_null
+          - unique
+      - name: supplier_id
+        description: "供應商唯一識別碼"
+      - name: material_id
+        description: "物料唯一識別碼"
+      - name: order_date
+        description: "訂單日期"
+      - name: quantity
+        description: "訂購數量"
+      - name: unit_price
+        description: "單價"
+
+  - name: stg_deliveries
+    description: "到貨記錄原始資料清理表"
+    columns:
+      - name: delivery_id
+        description: "到貨記錄編號"
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        description: "訂單編號"
+      - name: delivery_date
+        description: "到貨日期"
+      - name: delivered_qty
+        description: "實際到貨數量"
