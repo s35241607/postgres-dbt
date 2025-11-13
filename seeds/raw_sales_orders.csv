@@ -1,0 +1,5 @@
+order_id,customer_id,order_date,amount,currency
+1,1001,2023-01-01,1200,TWD
+2,1002,2023-01-02,800,TWD
+3,1001,2023-01-03,500,USD
+4,1003,2023-01-04,2000,TWD

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: rpt_sales_orders_dashboard
+    description: "銷售訂單報表大寬表 (含客戶名稱)"
+    columns:
+      - name: order_id
+        description: "訂單編號"
+        tests:
+          - not_null
+          - unique
+      - name: order_date
+        description: "訂單日期"
+      - name: order_amount_usd
+        description: "金額 (USD)"
+      - name: customer_name
+        description: "客戶名稱"

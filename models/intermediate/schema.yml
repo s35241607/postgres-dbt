@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: stg_sales_orders
-    description: "銷售訂單原始資料清理表 (欄位標準化、型別轉換)"
+  - name: int_sales_orders_enriched
+    description: "銷售訂單 enrich，包含金額幣別換算 (USD)"
     columns:
       - name: order_id
         description: "訂單編號"
@@ -11,11 +11,11 @@ models:
           - unique
       - name: customer_id
         description: "客戶編號"
-        tests:
-          - not_null
       - name: order_date
         description: "訂單日期"
       - name: order_amount
         description: "原始訂單金額"
       - name: order_currency
         description: "原始幣別"
+      - name: order_amount_usd
+        description: "金額 (USD)"

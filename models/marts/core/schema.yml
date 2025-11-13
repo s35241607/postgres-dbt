@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "客戶維度表 (唯一客戶清單)"
+    columns:
+      - name: customer_id
+        description: "客戶編號"
+        tests:
+          - not_null
+          - unique
+      - name: customer_name
+        description: "客戶名稱 (自動產生)"
+
+  - name: fct_sales_orders
+    description: "銷售訂單事實表 (以 USD 計價)"
+    columns:
+      - name: order_id
+        description: "訂單編號"
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: "客戶編號"
+      - name: order_date
+        description: "訂單日期"
+      - name: order_amount_usd
+        description: "金額 (USD)"
